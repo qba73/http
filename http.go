@@ -7,9 +7,9 @@ import (
 )
 
 // ListenAndServeTLS is a drop-in replacement for a default
-// ListenAndServe func from the http std library. The func
-// takes not paths to cert and key but slices of bytes representing
-// content of the files used by the original http.ListenAndServe func.
+// ListenAndServeTLS func from the http std library. The func
+// takes not paths to a cert and a key but slices of bytes representing
+// content of the files used by the original http.ListenAndServeTLS function.
 func ListenAndServeTLS(addr string, cert, key []byte, handler http.Handler) error {
 	tlsCert, err := LoadX509KeyPair(cert, key)
 	if err != nil {
