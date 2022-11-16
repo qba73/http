@@ -21,6 +21,7 @@ func ListenAndServeTLS(addr string, cert, key []byte, handler http.Handler) erro
 		Handler: handler,
 		TLSConfig: &tls.Config{
 			Certificates: []tls.Certificate{tlsCert},
+			MinVersion:   tls.VersionTLS12,
 		},
 		ReadTimeout:  30 * time.Second,
 		WriteTimeout: 30 * time.Second,
