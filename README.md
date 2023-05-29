@@ -4,7 +4,7 @@
 
 # http
 
-```http``` is a Go library that provides a drop-in replacement functionality for running the http server configured to use TLS.
+```http``` is a Go library for running the HTTP Server configured to use TLS.
 
 ## Using the Go library
 
